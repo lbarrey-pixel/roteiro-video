@@ -1,0 +1,29 @@
+:root { --verde: #2f7d4a; --fundo: #f6f8f4; --texto: #1d2a21; --borda: #d9e2da; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--fundo); color: var(--texto); }
+.topo { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; background: var(--verde); color: #fff; }
+.topo .link { color: #fff; opacity: .85; text-decoration: none; }
+main { padding: 18px; max-width: 960px; margin: 0 auto; }
+h1 { font-size: 26px; margin: 6px 0 4px; }
+.sub { color: #556; margin: 0 0 16px; }
+.lista { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.lista li { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: #fff; border: 1px solid var(--borda); border-radius: 14px; padding: 14px; }
+.lista .nome { font-weight: 600; }
+.lista .desc { font-size: 14px; color: #556; }
+.preco { font-weight: 700; white-space: nowrap; }
+button { background: var(--verde); color: #fff; border: 0; border-radius: 10px; padding: 10px 14px; font-size: 15px; cursor: pointer; }
+button.sec { background: #fff; color: var(--verde); border: 1px solid var(--verde); }
+.carrinho, .confirmacao { margin-top: 22px; background: #fff; border: 1px solid var(--borda); border-radius: 14px; padding: 16px; }
+.carrinho ul { padding-left: 18px; margin: 0 0 8px; }
+.total { margin: 8px 0 14px; }
+form { display: grid; gap: 10px; }
+label { display: grid; gap: 4px; font-size: 14px; }
+input, select { padding: 10px; border: 1px solid var(--borda); border-radius: 10px; font-size: 16px; }
+.filtros { display: flex; gap: 8px; margin: 10px 0 14px; }
+.filtros button { background: #fff; color: var(--texto); border: 1px solid var(--borda); }
+.filtros button.ativo { background: var(--verde); color: #fff; border-color: var(--verde); }
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 14px; overflow: hidden; }
+th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--borda); }
+th { font-size: 13px; color: #556; }
+.tag { padding: 3px 9px; border-radius: 999px; font-size: 13px; background: #fff3d6; color: #8a5a00; }
+.tag.entregue { background: #e2f3e8; color: var(--verde); }

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horta da Vila · Painel</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body class="painel">
+<header class="topo">
+  <strong>Horta da Vila · Painel</strong>
+  <a href="index.html" class="link">Loja</a>
+</header>
+
+<main>
+  <h1>Pedidos</h1>
+  <div class="filtros">
+    <button data-filtro="todos" class="ativo">Todos</button>
+    <button data-filtro="aberto">Em aberto</button>
+    <button data-filtro="entregue">Entregues</button>
+  </div>
+  <table>
+    <thead><tr><th>Nº</th><th>Cliente</th><th>Dia</th><th>Total</th><th>Situação</th><th></th></tr></thead>
+    <tbody id="pedidos"></tbody>
+  </table>
+  <p id="vazio" class="sub" hidden>Nenhum pedido ainda. Faça um pela loja.</p>
+</main>
+
+<script src="painel.js"></script>
+</body>
+</html>

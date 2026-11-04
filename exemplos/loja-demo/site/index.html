@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horta da Vila · Loja</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="topo">
+  <strong>Horta da Vila</strong>
+  <a href="painel.html" class="link">Painel</a>
+</header>
+
+<main id="loja">
+  <h1>Cestas da semana</h1>
+  <p class="sub">Entrega às terças e sextas. Pague na entrega ou por Pix.</p>
+  <ul id="produtos" class="lista"></ul>
+
+  <section class="carrinho" id="carrinho" hidden>
+    <h2>Seu pedido</h2>
+    <ul id="itens"></ul>
+    <p class="total">Total: <strong id="total">R$ 0,00</strong></p>
+    <form id="form">
+      <label>Nome <input name="nome" required autocomplete="off"></label>
+      <label>Telefone <input name="telefone" inputmode="tel" required autocomplete="off"></label>
+      <label>Entrega
+        <select name="dia">
+          <option>Terça</option>
+          <option>Sexta</option>
+        </select>
+      </label>
+      <button type="submit">Fechar pedido</button>
+    </form>
+  </section>
+
+  <section id="confirmacao" class="confirmacao" hidden>
+    <h2>Pedido confirmado</h2>
+    <p>Número <strong id="numero"></strong>. Obrigado, <span id="quem"></span>! A cesta chega na <span id="dia"></span>.</p>
+    <button id="novo">Fazer outro pedido</button>
+  </section>
+</main>
+
+<script src="loja.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "roteiro-video",
+  "version": "1.0.0",
+  "description": "Grava o vídeo-manual de um sistema web a partir de um roteiro em JSON (Playwright + ffmpeg).",
+  "type": "module",
+  "bin": { "roteiro-video": "./gravar.mjs" },
+  "scripts": {
+    "test": "node --test",
+    "demo:site": "node exemplos/loja-demo/servir.mjs",
+    "demo:gravar": "node gravar.mjs exemplos/loja-demo/roteiro.json saida/"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "playwright": "1.63.0"
+  },
+  "license": "MIT"
+}

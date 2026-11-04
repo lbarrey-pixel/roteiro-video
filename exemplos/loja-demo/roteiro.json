@@ -1,0 +1,76 @@
+{
+  "titulo": "Horta da Vila: como pedir e como atender",
+  "base_url": "http://127.0.0.1:8010",
+  "idioma": "pt-BR",
+  "fuso": "America/Sao_Paulo",
+  "marca": {
+    "nome": "Horta da Vila",
+    "subtitulo": "Manual rápido da loja e do painel",
+    "fundo": "#173b25",
+    "fundo2": "#2f7d4a",
+    "destaque": "#f2c14e",
+    "texto": "#f7fbf5",
+    "textoSuave": "rgba(247,251,245,0.75)"
+  },
+  "cenas": [
+    {
+      "tipo": "capa",
+      "titulo": "Horta da Vila",
+      "subtitulo": "Como o cliente pede pelo celular e como você acompanha no painel",
+      "duracao": 5,
+      "narracao": "Este é o manual da Horta da Vila. Em dois minutos você vê como o cliente monta a cesta pelo celular e como o pedido aparece no painel."
+    },
+    {
+      "tipo": "etapas",
+      "titulo": "O caminho de um pedido",
+      "etapas": [
+        { "rotulo": "CLIENTE", "texto": "Escolhe as cestas e fecha o pedido" },
+        { "rotulo": "PAINEL", "texto": "O pedido entra como \"em aberto\"" },
+        { "rotulo": "ENTREGA", "texto": "Na terça ou na sexta, a cesta sai" },
+        { "rotulo": "PAINEL", "texto": "Marca como entregue" }
+      ],
+      "nota": "Tudo fica registrado com número de pedido.",
+      "narracao": "São quatro passos: o cliente escolhe e fecha o pedido, ele aparece em aberto no painel, a cesta sai no dia escolhido e você marca como entregue."
+    },
+    {
+      "tipo": "celular",
+      "rotulo": "LOJA · CELULAR",
+      "titulo": "Montar a cesta",
+      "itens": ["Toque em Adicionar nos produtos", "Confira o total", "Preencha nome e telefone", "Feche o pedido"],
+      "url": "/",
+      "esperarTexto": "Cestas da semana",
+      "acoes": [
+        { "clicar": { "papel": "button", "nome": "Adicionar Cesta família" }, "esperar": 0.8 },
+        { "clicar": { "papel": "button", "nome": "Adicionar Mel 500 g" }, "esperar": 0.8 },
+        { "rolar": 500 },
+        { "digitar": [{ "papel": "textbox", "nome": "Nome" }, "Marina"] },
+        { "digitar": [{ "papel": "textbox", "nome": "Telefone" }, "11 90000 0000"] },
+        { "clicar": { "papel": "button", "nome": "Fechar pedido" }, "esperar": 1.2 },
+        { "esperarTexto": "Pedido confirmado" }
+      ],
+      "final": 2,
+      "narracao": "No celular, o cliente toca em Adicionar nos produtos que quer, confere o total, preenche nome e telefone e fecha o pedido. A confirmação mostra o número do pedido e o dia da entrega."
+    },
+    {
+      "tipo": "tela",
+      "rotulo": "PAINEL · COMPUTADOR",
+      "titulo": "Acompanhar e entregar",
+      "url": "/painel.html",
+      "esperarTexto": "Pedidos",
+      "acoes": [
+        { "clicar": { "papel": "button", "nome": "Em aberto" }, "esperar": 1 },
+        { "clicar": { "papel": "button", "nome": "Marcar entregue" }, "esperar": 1 },
+        { "clicar": { "papel": "button", "nome": "Entregues" }, "esperar": 1.2 }
+      ],
+      "final": 1.5,
+      "narracao": "No painel, o pedido aparece em aberto. Depois da entrega, basta marcar como entregue; ele passa para a lista de entregues e o histórico fica guardado."
+    },
+    {
+      "tipo": "fechamento",
+      "titulo": "Pronto",
+      "subtitulo": "Dúvidas? Fale com quem cuida da loja.",
+      "duracao": 4,
+      "narracao": "É isso. Qualquer dúvida, fale com quem cuida da loja."
+    }
+  ]
+}
